@@ -8,7 +8,7 @@ import (
 type Report struct {
 	AndroidVersion   string  `json:"ANDROID_VERSION" form:"ANDROID_VERSION"`
 	AppVersionCode   int     `json:"APP_VERSION_CODE" form:"APP_VERSION_CODE"`
-	AppVersionName   float64 `json:"APP_VERSION_NAME" form:"APP_VERSION_NAME"`
+	AppVersionName   string `json:"APP_VERSION_NAME" form:"APP_VERSION_NAME"`
 	AvailableMemSize int     `json:"AVAILABLE_MEM_SIZE" form:"AVAILABLE_MEM_SIZE"`
 	Brand            string  `json:"BRAND" form:"BRAND"`
 
