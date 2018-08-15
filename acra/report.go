@@ -46,6 +46,8 @@ type Report struct {
 		} `json:"VERSION" form:"VERSION"`
 	} `json:"BUILD" form:"BUILD"`
 
+	BuildConfig map[string]interface{} `json:"BUILD_CONFIG" form:"BUILD_CONFIG"`
+
 	CrashConfiguration struct {
 		CompatScreenHeightDp        int    `json:"compatScreenHeightDp" form:"compatScreenHeightDp"`
 		CompatScreenWidthDp         int    `json:"compatScreenWidthDp" form:"compatScreenWidthDp"`
