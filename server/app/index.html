@@ -7,13 +7,13 @@
 
         <title>ACRA Reports</title>
 
-        <link rel="stylesheet" href="/assets/css/materialize.min.css" />
-        <link rel="stylesheet" href="/assets/css/materialize.icons.css" />
+        <link rel="stylesheet" href="assets/css/materialize.min.css" />
+        <link rel="stylesheet" href="assets/css/materialize.icons.css" />
 
-        <script src="/assets/js/jquery.min.js"></script>
-        <script src="/assets/js/moment.min.js"></script>
-        <script src="/assets/js/materialize.min.js"></script>
-        <script src="/assets/js/vue.min.js"></script>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/moment.min.js"></script>
+        <script src="assets/js/materialize.min.js"></script>
+        <script src="assets/js/vue.min.js"></script>
     </head>
 
     <body>
@@ -123,7 +123,7 @@
                     }
 
                     $.ajax({
-                        url: '/view',
+                        url: 'view',
                         type: 'GET',
                         dataType: 'json',
                         success: function(data) {
@@ -144,7 +144,7 @@
                     }
 
                     $.ajax({
-                        url: '/view?id=' +  self.reports[idx].REPORT_ID,
+                        url: 'view?id=' +  self.reports[idx].REPORT_ID,
                         type: 'DELETE',
                         success: function(data) {
                             self.reports.splice(idx, 1);
