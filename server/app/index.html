@@ -62,11 +62,15 @@
                                     <li class="tab col s2"><a v-bind:href="'#t1' + $index" class="teal-text active">Stack Trace</a></li>
                                     <li class="tab col s2"><a v-bind:href="'#t2' + $index" class="teal-text">Logcat</a></li>
                                     <li class="tab col s2"><a v-bind:href="'#t3' + $index" class="teal-text">Dumpsys Meminfo</a></li>
+                                    <li class="tab col s2"><a v-bind:href="'#t4' + $index" class="teal-text">Custom Data</a></li>
+                                    <li class="tab col s2"><a v-bind:href="'#t5' + $index" class="teal-text">Build Config</a></li>
                                     <div class="indicator teal" style="z-index:1;"></div>
                                 </ul>
                                 <div v-bind:id="'t1' + $index" class="col s10 offset-s1"><small><pre>{{ report.STACK_TRACE }}</pre></small></div>
                                 <div v-bind:id="'t2' + $index" class="col s10 offset-s1"><small><pre>{{ report.LOGCAT }}</pre></small></div>
                                 <div v-bind:id="'t3' + $index" class="col s10 offset-s1"><small><pre>{{ report.DUMPSYS_MEMINFO }}</pre></small></div>
+                                <div v-bind:id="'t4' + $index" class="col s10 offset-s1"><small><pre>{{ report.CUSTOM_DATA }}</pre></small></div>
+                                <div v-bind:id="'t5' + $index" class="col s10 offset-s1"><small><pre>{{ report.BUILD_CONFIG }}</pre></small></div>
                             </div>
                         </div>
 
@@ -130,9 +134,9 @@
                             self.reports = data;
                             self.loading = false;
                         },
-                        error: function(jqXHR, textStatus, errorThrown) { 
+                        error: function(jqXHR, textStatus, errorThrown) {
                             self.loading = false;
-                            console.log("Error: " + errorThrown); 
+                            console.log("Error: " + errorThrown);
                         }
                     });
                 },
@@ -149,8 +153,8 @@
                         success: function(data) {
                             self.reports.splice(idx, 1);
                         },
-                        error: function(jqXHR, textStatus, errorThrown) { 
-                            console.log("Error: " + errorThrown); 
+                        error: function(jqXHR, textStatus, errorThrown) {
+                            console.log("Error: " + errorThrown);
                         }
                     });
                 }
