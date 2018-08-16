@@ -14,6 +14,10 @@ docker run -d --name proxy --link acra-go:acra -e PROXY=true \
            thedrhax/nginx-stateless:v0.2.1
 ```
 
+* Added tabs **Custom Data** and **Build Config** for each report.
+
+* Fixed type of `APP_VERSION_NAME` (part of issue [gen2brain/acra-go#5](https://github.com/gen2brain/acra-go/issues/5)).
+
 ## Installation
 
 ```
